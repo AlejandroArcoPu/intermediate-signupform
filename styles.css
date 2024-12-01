@@ -6,6 +6,7 @@
   --primary-padding: 50px;
   --secondary-padding: 25px;
   --primary-font-size: 3rem;
+  --small-font-size: 1rem;
 }
 
 *,
@@ -146,6 +147,20 @@ a {
   color: var(--primary-color);
 }
 
+a::after {
+  content: url("./images/external-link-green.svg");
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:hover::after {
+  content: url("./images/external-link-black.svg");
+}
+
 .submit {
   display: flex;
   justify-content: center;
@@ -164,6 +179,8 @@ a {
   display: flex;
   text-align: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   font-size: var(--primary-font-size);
   width: 50%;
   padding: var(--primary-padding);
@@ -172,4 +189,17 @@ a {
 .main-image > p > span {
   font-style: italic;
   font-weight: bold;
+}
+
+.image-owner {
+  align-self: flex-end;
+  font-size: var(--small-font-size);
+}
+
+.image-owner > a {
+  color: white;
+}
+
+.image-owner > a::after {
+  content: url("./images/external-link-white.svg");
 }
