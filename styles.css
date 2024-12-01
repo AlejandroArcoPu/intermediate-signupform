@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #426b1f;
+  --secondary-color: #686666;
+  --primary-font: "Newsreader", serif, Arial;
+  --secondary-font: "Inter", serif, Arial;
+  --primary-padding: 50px;
+  --secondary-padding: 25px;
+  --primary-font-size: 3rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--secondary-font);
+  overflow: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+header {
+  position: absolute;
+  text-align: right;
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  width: 100%;
+  padding: var(--secondary-padding);
+}
+
+header > h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.create-account {
+  width: 50%;
+  padding: var(--primary-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.create-account > h1,
+.create-account > p {
+  font-family: var(--primary-font);
+  text-align: center;
+}
+
+.create-account > h1 {
+  font-size: var(--primary-font-size);
+}
+
+.create-account > p {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+
+.put-text {
+  display: flex;
+  flex-direction: column;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border-radius: 4px;
+  min-width: 150px;
+  padding: 8px;
+  border: 1px solid #d9d9d9;
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--primary-color);
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px 90px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.log-in {
+  text-align: center;
+}
+
+a {
+  color: var(--primary-color);
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.checkbox {
+  width: max-content;
+}
+
+.main-image {
+  background-image: url("./images/jonathan-kemper.png");
+  background-size: cover;
+  font-family: var(--primary-font);
+  color: white;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  font-size: var(--primary-font-size);
+  width: 50%;
+  padding: var(--primary-padding);
+}
+
+.main-image > p > span {
+  font-style: italic;
+  font-weight: bold;
+}
