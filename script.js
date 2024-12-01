@@ -11,3 +11,22 @@ const adjustMargin = () => {
 
 window.addEventListener("load", adjustMargin);
 window.addEventListener("resize", adjustMargin);
+let passwordInputs = document.querySelectorAll('input[type="password"]');
+
+const checkPasswordValidity = () => {
+  let password = passwordInputs[0];
+  let confirmPassword = passwordInputs[1];
+
+  password.setCustomValidity("");
+  confirmPassword.setCustomValidity("");
+  if (!password.validity.valid) return;
+
+  if (password.value !== confirmPassword.value) {
+    password.setCustomValidity("Passwords must be identical.");
+    confirmPassword.setCustomValidity("Passwords must be identical.");
+  }
+};
+
+passwordInputs.forEach((password) =>
+  password.addEventListener("keyup", checkPasswordValidity)
+);
