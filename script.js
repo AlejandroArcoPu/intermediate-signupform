@@ -11,6 +11,8 @@ const adjustMargin = () => {
 
 window.addEventListener("load", adjustMargin);
 window.addEventListener("resize", adjustMargin);
+let allInputs = document.querySelectorAll("input");
+
 let passwordInputs = document.querySelectorAll('input[type="password"]');
 
 const checkPasswordValidity = () => {

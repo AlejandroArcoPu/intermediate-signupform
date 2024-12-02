@@ -129,12 +129,8 @@ input:focus {
   border: 2px solid var(--primary-color);
 }
 
-input:invalid {
+input:focus:invalid {
   border: 2px solid red;
-}
-
-input:not(:focus):invalid {
-  border-color: var(--border-color);
 }
 
 button {
