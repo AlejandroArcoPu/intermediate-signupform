@@ -1,12 +1,16 @@
 :root {
   --primary-color: #426b1f;
   --secondary-color: #686666;
+  --secondary-font-color: white;
   --primary-font: "Newsreader", serif, Arial;
   --secondary-font: "Inter", serif, Arial;
   --primary-padding: 50px;
   --secondary-padding: 25px;
   --primary-font-size: 3rem;
-  --small-font-size: 1rem;
+  --secondary-font-size: 2rem;
+  --small-font-size: 1.5rem;
+  --tiny-font-size: 1rem;
+  --border-color: #d9d9d9;
 }
 
 *,
@@ -67,7 +71,7 @@ header {
 }
 
 header > h1 {
-  font-size: 2rem;
+  font-size: var(--secondary-font-size);
   font-weight: 500;
 }
 
@@ -90,7 +94,7 @@ header > h1 {
 }
 
 .create-account > p {
-  font-size: 1.5rem;
+  font-size: var(--small-font-size);
   color: var(--secondary-color);
   margin-bottom: 40px;
 }
@@ -111,7 +115,7 @@ input[type="password"] {
   border-radius: 4px;
   min-width: 150px;
   padding: 8px;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--border-color);
   width: 100%;
 }
 
@@ -129,9 +133,13 @@ input:invalid {
   border: 2px solid red;
 }
 
+input:not(:focus):invalid {
+  border-color: var(--border-color);
+}
+
 button {
   cursor: pointer;
-  color: white;
+  color: var(--secondary-font-color);
   background-color: var(--primary-color);
   border: none;
   padding: 10px 90px;
@@ -179,7 +187,7 @@ a:hover::after {
   background-image: url("./images/jonathan-kemper.png");
   background-size: cover;
   font-family: var(--primary-font);
-  color: white;
+  color: var(--secondary-font-color);
   display: flex;
   text-align: center;
   align-items: center;
@@ -197,11 +205,11 @@ a:hover::after {
 
 .image-owner {
   align-self: flex-end;
-  font-size: var(--small-font-size);
+  font-size: var(--tiny-font-size);
 }
 
 .image-owner > a {
-  color: white;
+  color: var(--secondary-font-color);
 }
 
 .image-owner > a::after {
